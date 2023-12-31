@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="."  name="linux-sdk"/>
+  <default sync-j="4"
+           remote="linux-sdk"
+           revision="2023.11.x" />
+
+  <project remote="linux-sdk" name="buildroot" path="buildroot" revision="2023.11.x" />
+  <project remote="linux-sdk" name="buildroot-external-custom" path="buildroot-external-custom" revision="2023.11.x">
+    <linkfile dest="build_orangepi-pc-plus.sh" src="utils/build_orangepi-pc-plus.sh" />
+  </project>
+</manifest>
