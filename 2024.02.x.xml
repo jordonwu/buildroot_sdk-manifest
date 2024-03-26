@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="."  name="linux-sdk"/>
+  <default sync-j="4"
+           remote="linux-sdk"
+           revision="2024.02.x" />
+
+  <project remote="linux-sdk" name="buildroot" path="buildroot" revision="2024.02.x" />
+  <project remote="linux-sdk" name="buildroot-external-custom" path="buildroot-external-custom" revision="2024.02.x">
+    <linkfile dest="build_debix-model-a.sh" src="utils/build_debix-model-a.sh" />
+    <linkfile dest="build_orangepi-pc-plus.sh" src="utils/build_orangepi-pc-plus.sh" />
+    <linkfile dest="build_rock5b.sh" src="utils/build_rock5b.sh" />
+    <linkfile dest="build_walnutpi-1b.sh" src="utils/build_walnutpi-1b.sh" />
+  </project>
+</manifest>
