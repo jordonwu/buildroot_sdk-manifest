@@ -1,4 +1,12 @@
 # 1. download and sync code
+For 2025.02.x.xml manifest file
+```
+$ mkdir linux_sdk
+$ cd linux_sdk
+$ repo init -u git@github.com:jordonwu/buildroot_sdk-manifest.git -b main -m 2025.02.x.xml
+$ repo sync -j8
+```
+
 For 2024.11.x.xml manifest file
 ```
 $ mkdir linux_sdk
