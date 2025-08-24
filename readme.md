@@ -1,4 +1,12 @@
 # 1. download and sync code
+For 2025.05.x.xml manifest file
+```
+$ mkdir buildroot_sdk
+$ cd buildroot_sdk
+$ repo init -u git@github.com:jordonwu/buildroot_sdk-manifest.git -b main -m 2025.05.x.xml
+$ repo sync -j8
+```
+
 For 2025.02.x.xml manifest file
 ```
 $ mkdir linux_sdk
@@ -31,10 +39,9 @@ $ repo init -u git@github.com:jordonwu/buildroot_sdk-manifest.git -b main -m 202
 $ repo sync -j8
 ```
 
-# 2. build image
+# 2. For Rock 5b board build & flash
 
-For rock 5b board build
-
+## 2.1 build image
 ```
 $ cd linux_sdk
 $ ./build_rock5b.sh
@@ -62,11 +69,9 @@ lrwxrwxrwx 1 soc soc   11 3月  14 16:39 rootfs.ext4 -> rootfs.ext2
 -rw-r--r-- 1 soc soc 9.1M 3月  14 16:22 u-boot-rockchip.bin
 ```
 
-# 3. flash sdcard.img to TF Card
+# 2.2 flash sdcard.img to TF Card
 * 1. you can using balenaEtcher to flash sdcard.img to your TF card (recommended)
 * 2. or you can using below linux dd command to flash sdcard.img to your TF card
-
 ```
 $ sudo dd if=sdcard.img of=/dev/sd<partition> bs=1M conv=fsync  status=progress
 ```
-
